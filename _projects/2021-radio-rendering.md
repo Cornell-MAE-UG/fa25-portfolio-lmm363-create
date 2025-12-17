@@ -1,25 +1,21 @@
 ---
 layout: project
-title: Radio CAD Rendering
-description: Advanced CAD Project
+title: Wind Turbine Blade Design
+description: Wind Turbine Blade Design Overview
 technologies: [Autodesk Fusion]
-image: /assets/images/radio-machine-cad.jpg
+image: /assets/images/radio-machine.jpg
 ---
+We designed, built, and tested a three-blade wind turbine for operation in Cornell's Big Blue wind tunnel, with the goal of maximizing power output while meeting strict size, speed, and structural constraints. The design was tuned to the tunnel’s operating wind speeds using a Weibull-based wind characterization.
 
-For a class, we were asked to CAD a complex object. This design was...Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec accumsan leo. Pellentesque ornare orci enim, vitae vestibulum nibh rutrum in. Donec pharetra risus nec ipsum fringilla, et mattis tortor auctor. Duis tortor ante, posuere ut odio a, scelerisque interdum purus. Aenean faucibus luctus est, sed bibendum tellus. 
+Our team combined 1-D momentum theory and Blade Element Momentum (BEM) theory to link wind conditions, airfoil aerodynamics, and blade geometry. We selected a target tip-speed ratio of 6 to achieve high aerodynamic efficiency and chose the NACA 66(1)-212 airfoil based on its lift-to-drag ratio. A MATLAB optimization script swept rotor speed and angle of attack, generated optimal chord and twist distributions, and iterated on spanwise aerodynamic forces to converge on maximum predicted torque and power. The resulting blade geometry was structurally checked using a simplified bending-stress model and then lofted in CAD for fabrication.
 
-Nulla et magna urna. Morbi a ipsum sollicitudin, rhoncus risus volutpat, ultricies nunc. Quisque mollis finibus ante id imperdiet. Quisque vehicula elit sit amet felis facilisis fermentum.
 
-![Shaded rendering of earlier version]({{ "/assets/images/radio-machine.jpg" | relative_url }}){: .inline-image-r style="width: 200px"}
+ 
+![Our experimentally generated power curves from our design]({{ "/assets/images/old-radio.jpg" | relative_url }}){: .inline-image-l}
 
-Nulla et magna urna. Morbi a ipsum sollicitudin, rhoncus risus volutpat, ultricies nunc. Quisque mollis finibus ante id imperdiet. Quisque vehicula elit sit amet felis facilisis fermentum.
+After manufacturing the blades, we experimentally assessed the tubine's performance in the wind tunnel across multiple fan frequencies (4–10 Hz). At each wind speed, torque brake voltage was incrementally increased until stall or hardware limits were reached, and steady-state RPM, torque, and power were recorded. From this data, we generated power curves and efficiency estimates, finding that the turbine achieved peak torque near the designed operating wind speed and demonstrated strong performance at higher speeds where stall was not reached. The turbine remained structurally intact and stable throughout testing, validating both the aerodynamic model and safety margins.
 
-Aenean tincidunt aliquam arcu, in euismod dui dapibus eu. In placerat, mi et ultrices consequat, quam ligula cursus mauris, in semper neque nibh at est. Maecenas hendrerit dignissim porta. Phasellus nec fringilla dolor. Etiam efficitur nisi sit amet velit pharetra feugiat. Etiam ultrices turpis at leo semper, eleifend scelerisque neque malesuada. Aliquam molestie congue rhoncus. Donec blandit neque dolor, nec tristique mi pretium ac. Mauris tincidunt ullamcorper magna, nec pellentesque mi sagittis quis.
 
-I was inspired by this old radio when I made this rendering:
+I primarily worked on the research and theoretical development, including momentum theory and BEM modeling, and developed the CAD blade geometry from the optimized chord and twist distributions. I also helped define the wind-tunnel testing procedure and performed efficiency and power calculations used to evaluate turbine performance.
 
-![Photo of old radio]({{ "/assets/images/old-radio.jpg" | relative_url }}){: .inline-image-l}
-
-Aenean tincidunt aliquam arcu, in euismod dui dapibus eu. In placerat, mi et ultrices consequat, quam ligula cursus mauris, in semper neque nibh at est. Maecenas hendrerit dignissim porta. Phasellus nec fringilla dolor. Etiam efficitur nisi sit amet velit pharetra feugiat. Etiam ultrices turpis at leo semper, eleifend scelerisque neque malesuada. Aliquam molestie congue rhoncus. Donec blandit neque dolor, nec tristique mi pretium ac. Mauris tincidunt ullamcorper magna, nec pellentesque mi sagittis quis.
-
-Aenean tincidunt aliquam arcu, in euismod dui dapibus eu. In placerat, mi et ultrices consequat, quam ligula cursus mauris, in semper neque nibh at est. Maecenas hendrerit dignissim porta. Phasellus nec fringilla dolor. Etiam efficitur nisi sit amet velit pharetra feugiat. Etiam ultrices turpis at leo semper, eleifend scelerisque neque malesuada. Aliquam molestie congue rhoncus. Donec blandit neque dolor, nec tristique mi pretium ac. Mauris tincidunt ullamcorper magna, nec pellentesque mi sagittis quis.
+![Photo of the CAD design]({{ "/assets/images/CAD Design.jpg" | relative_url }}){: .inline-image-l}
