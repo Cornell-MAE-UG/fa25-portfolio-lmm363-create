@@ -229,4 +229,4 @@ For example, change the text width by changing the `max-width` of `.container`:
 .container {
   max-width: 1000px;
 }
-```
+```  
